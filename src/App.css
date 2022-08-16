@@ -258,3 +258,264 @@ h1 {
 }
 
 
+@media screen and (min-width:425px) and (max-width:768px) {
+  .App {
+    text-align: center;
+  }
+  
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    padding: 25px 0px 0px;
+    border-bottom: 8px solid #DDDDDD;
+    height: 30px;
+    overflow: hidden;
+    position: fixed;
+    margin-top: -10%;
+    background-color: #0F0E0E;
+    z-index: 1;
+  }
+  
+  body {
+    background-color:#0F0E0E;
+    overflow: scroll;
+    padding-top: 5.5%;
+    z-index: 2;
+  }
+  
+  a {
+    margin-right: 1%;
+    padding: 1px 10px;
+    font-weight: 700;
+    font-size: 15px;
+    color: #DDDDDD;
+    text-decoration: none;
+    border-top: 5px solid #DDDDDD;
+    border-right: 5px solid #DDDDDD;
+    border-left: 5px solid #DDDDDD;
+    /* border-radius: 105px; */
+    background-color: #1363DF;
+    height: 30px;
+    text-transform: uppercase;
+    z-index: 100;
+    /* opacity: 80%; */
+  }
+  
+  a:hover {
+    margin-top: -1%;
+    background-color: #47B5FF;
+    height: 30px;
+    color: #0F0E0E;
+  }
+  
+  .ufo-image {
+    height: 40px;
+    margin-top: -2%;
+    margin-right: 30%;
+    z-index: -100;
+    animation: ufo-image 5s infinite;
+    animation-delay: 0s;
+  }
+  
+  @keyframes ufo-image {
+    0% {margin-top: -2%; margin-right:30%;}
+    20% {transform: rotate(90deg); margin-right: 0%;}
+    25% {transform: rotate(110deg); margin-right: 0%;}
+    30% {transform: rotate(130deg); margin-right: 0%;}
+    35% {transform: rotate(140deg); margin-right: 0%;}
+    40% {transform: rotate(160deg); margin-right: 0%;}
+    45% {transform: rotate(180deg); margin-right: 0%;}
+    50% {transform: rotate(200deg); margin-right: 0%;}
+    55% {transform: rotate(220deg); margin-right: 0%;}
+    60% {transform: rotate(240deg); margin-right: 0%;}
+    65% {transform: rotate(260deg); margin-right: 0%;}
+    70% {transform: rotate(280deg); margin-right: 0%;}
+    75% {transform: rotate(300deg); margin-right: 0%;}
+    90% {transform: rotate(360deg); margin-right: 30%;}
+    100% {transform: rotate(360deg); margin-right: 30%;}
+  }
+  
+  .new-task-container {
+    position: relative;
+    border: 8px solid #DDDDDD;
+    width: 90%;
+    margin-left: 4%;
+    margin-top: 5%;
+    border-radius: 130px;
+    justify-self: center;
+  }
+  
+  .to-do-word {
+    color: #DDDDDD;
+    font-size: 20px;
+    margin: 0.5% 0%;
+    font-weight: 500;
+  }
+  
+  .textarea {
+    justify-self: center;
+    width: 79%;
+    margin-bottom: 0.5%;
+    background-color: #DFF6FF;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 10px;
+    padding-left: 1%;
+    border: 5px solid #90E0EF;
+  }
+  
+  ::placeholder {
+    color: rgb(184, 178, 178)
+  }
+  
+  .submit-btn {
+    width: 81%;
+    height: 35px;
+    justify-self: center;
+    margin-bottom: 1%;
+    background-color: #1363DF;
+    border: 5px solid #DDDDDD;
+    border-radius: 10px;
+    color: #DDDDDD;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 0.3% 0%;
+    text-transform: uppercase;
+  }
+  
+  .submit-btn:hover {
+    width: 83%;
+    background-color: #47B5FF;
+    color: #0F0E0E;
+  }
+  
+  .disable-submit-btn {
+    width: 81%;
+    height: 35px;
+    justify-self: center;
+    margin-bottom: 1%;
+    background-color: #1363DF;
+    border: 5px solid #DDDDDD;
+    border-radius: 10px;
+    color: #DDDDDD;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 0.3% 0%;
+    text-transform: uppercase;
+    opacity: 40%;
+  }
+  
+  h1 {
+    color: #DDDDDD;
+    margin-top: 2%;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  .tasks {
+    /* background-color: #373A40; */
+    background-color: #363434;
+    color: #DDDDDD;
+    width: 90%;
+    margin-left: 4.5%;
+    margin-bottom: 2%;
+    border-radius: 20px;
+    display: grid;
+    grid-template: 1fr 60px 60px 50px / 0.2fr 1fr 1fr 0.2fr;
+    grid-template-areas:
+    ". item1 item1 ."
+    ". item2 item2 ."
+    ". item3 item3 ."
+    ". btn1 btn2 .";
+  }
+  
+  .task-name {
+    grid-area: item1;
+    word-wrap: break-word;
+    word-break: break-all;
+    margin: 2% 0% 1%;
+    justify-self: center;
+    font-size: 25px;
+    font-weight: 600;
+  }
+  
+  .created-at {
+    grid-area: item2;
+    /* border: 1px solid white; */
+    margin-bottom: 0%;
+    padding: 0%;
+    font-family: Courier New, monospace;
+  }
+  
+  .updated-at {
+    grid-area: item3;
+    /* border: 1px solid white; */
+    margin-top: 0%;
+    margin-bottom: 1%;
+    padding: 0%;
+    font-family: Courier New, monospace;
+  }
+  
+  .done-btn {
+    width: 90%;
+    grid-area: btn1;
+    margin-bottom: 100%;
+    height: 35px;
+    justify-self: center;
+    background-color: #1363DF;
+    border: 5px solid #DDDDDD;
+    border-radius: 10px;
+    color: #DDDDDD;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  .already-done-btn {
+    width: 90%;
+    grid-area: btn1;
+    margin-bottom: 100%;
+    height: 35px;
+    justify-self: center;
+    background-color: #1363DF;
+    border: 5px solid #DDDDDD;
+    border-radius: 10px;
+    color: #DDDDDD;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    opacity: 40%;
+  }
+  
+  .done-btn:hover {
+    width: 94%;
+    justify-self: center;
+    background-color: #47B5FF;
+    color: #0F0E0E;
+  }
+  
+  .delete-btn {
+    width: 90%;
+    grid-area: btn2;
+    margin-bottom: 100%;
+    height: 35px;
+    justify-self: center;
+    background-color: #1363DF;
+    border: 5px solid #DDDDDD;
+    border-radius: 10px;
+    color: #DDDDDD;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  .delete-btn:hover {
+    width: 94%;
+    justify-self: center;
+    background-color: #47B5FF;
+    color: #0F0E0E;
+  }
+}
